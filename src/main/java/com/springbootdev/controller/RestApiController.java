@@ -47,10 +47,11 @@ public class RestApiController {
 
     /**
      * <p>
-     *     This method can be accessed by any user with ROLE_USER.
-     *     But the content will be returned if the user has the ROLE_ADMIN and
-     *     authenticated principal name is same as the username od the return object.     *
+     * This method can be accessed by any user with ROLE_USER.
+     * But the content will be returned if the user has the ROLE_ADMIN and
+     * authenticated principal name is same as the username od the return object.     *
      * </p>
+     *
      * @param user
      * @return
      */
