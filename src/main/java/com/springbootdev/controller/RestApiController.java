@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.security.RolesAllowed;
 
+
 @RestController
 public class RestApiController {
 
@@ -49,7 +50,7 @@ public class RestApiController {
      * <p>
      * This method can be accessed by any user with ROLE_USER.
      * But the content will be returned if the user has the ROLE_ADMIN and
-     * authenticated principal name is same as the username od the return object.     *
+     * authenticated principal name is same as the username of the return object.
      * </p>
      *
      * @param user
@@ -75,6 +76,10 @@ public class RestApiController {
     public String welcomeAppUser7(@AuthenticationPrincipal User user) {
         return "Welcome User " + user.getName();
     }
+
+    @GetMapping(value = "/guest/user",produces = "application/xml")
+    public UserProfile guestUser() {
+
+        return new UserProfile("chathuranga","123");
+    }
 }
-
-
